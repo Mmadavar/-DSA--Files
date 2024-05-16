@@ -10,6 +10,19 @@
   */
 
 const maxSubArray = (nums) => {
+    let maxsum = nums[0]
+    let sum = 0;
+    for (let i = 0; i < nums.length; i++) {
+        if (sum < 0) {
+            sum = 0;
+        }
+
+        sum += nums[i]
+
+        maxsum = Math.max(maxsum, sum)
+    }
+    return maxsum
+
 
 }
 
