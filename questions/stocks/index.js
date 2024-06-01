@@ -11,7 +11,23 @@
  */
 
 const stocks = (prices) => {
-   
+   let Maxprofit = 0;
+   let L = 0;
+
+   for (let R = 1; R < prices.length; R++) {
+       let profit = prices[R] - prices[L];
+       if (profit > 0) {
+           Maxprofit = Math.max(Maxprofit,profit)
+       } else {
+           L = R
+       }
+
+
+
+
+
+   }
+   return Maxprofit;
 }
 
 
