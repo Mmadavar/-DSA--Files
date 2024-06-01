@@ -12,6 +12,22 @@
  */
 
 const twoSortedSum = (nums, target) => {
+    let L = 0
+    let R = nums.length - 1;
+    while (L < R) {
+        if (nums[L] + nums[R] === target) {
+            return [L,R]
+        }
+
+        if (nums[L] + nums[R] > target) {
+            R--;
+        }
+
+        if (nums[L] + nums[R] < target) {
+            L++;
+        }
+    }
+
 
 }
 
