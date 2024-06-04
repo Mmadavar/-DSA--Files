@@ -11,6 +11,7 @@
  * binarySearch([-1, 4, 18, 20], 18) -> 2
  * 
  */
+nums[mid] < nums[R]
 
 const binarySearch = (nums, target) => {
     let left = 0

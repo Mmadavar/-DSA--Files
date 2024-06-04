@@ -13,7 +13,22 @@
  */
 
 const findMinimum = (nums) => {
+    let L = 0
+    let R = nums.length - 1
+    let mid = Math.floor((L + R) / 2)
+    while (L <= R) {
+        let mid = Math.floor((L + R) / 2)
+        if (nums[mid] > nums[R]) {
+            L = mid + 1
+        } else {
+            R = mid
+        }
+    }
+
+    return nums[L]
+
 
 }
+
 
 module.exports = findMinimum;
