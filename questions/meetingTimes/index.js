@@ -11,6 +11,13 @@
  */
 
  const meetingTimes = (times) => {
+         for (let i = 1; i < times.length; i++) {
+            if (times[i][0] < times[i - 1][1]) {
+             return false;
+            }
+         }
+
+         return true;
 
  };
 
