@@ -12,21 +12,21 @@
  */
 
  const flatten = (nums) => {
-  const result = []
-
-  const flattenHelper = (nums) => {
-    for (elem of nums){
-      if (Array.isArray(elem)){
-        flattenHelper(elem)
-      }else{
-        result.push(elem)
+     let results = []
+     flatten(nums)
+     function flatten(nums) {
+      for (let elem of nums) {
+          if (Array.isArray(elem)) {
+           flatten(elem)
+          } else {
+           results.push(elem)
+          }
+       }
       }
-    }
-  }
 
-  flattenHelper(nums)
+      return results
 
-  return result
+
 
 
  };
