@@ -12,6 +12,21 @@
  */
 
  const moveZeroes = (nums) => {
+  let L = 0
+  let R = 0
+  while (R < nums.length) {
+   if (nums[R] !== 0) {
+    let temp = nums[R]
+    nums[R] = nums[L]
+    nums[L] = temp
+    L += 1
+   }
+   R += 1
+
+  }
+  return nums
+
+
 
 }
 
